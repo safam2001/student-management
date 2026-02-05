@@ -1,42 +1,101 @@
-#root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  font-family: Arial, Helvetica, sans-serif;
+  background-color: #f3f5f8;
+}
+
+/* الحاوية الرئيسية – بعرض الشاشة */
+.table-container {
+  width: 100vw;        /* كامل عرض الشاشة */
+  min-height: 100vh;
+  padding: 25px 40px;  /* مسافة خفيفة من الأطراف */
+  background-color: #ffffff;
+}
+
+/* العنوان */
+.table-container h2 {
   text-align: center;
+  margin: 0 0 25px 0;
+  color: #333;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+/* منطقة الإدخال */
+.table-container > div {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  flex-wrap: wrap;
+  margin-bottom: 15px;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* مدخلات */
+input {
+  padding: 10px 12px;
+  border-radius: 5px;
+  border: 1px solid #ccc;
+  min-width: 220px;
+  font-size: 14px;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* أزرار */
+button {
+  padding: 10px 16px;
+  border-radius: 5px;
+  border: none;
+  cursor: pointer;
+  font-size: 14px;
 }
 
-.card {
-  padding: 2em;
+button.add {
+  background-color: #2e7d32;
+  color: white;
 }
 
-.read-the-docs {
-  color: #888;
+button.edit {
+  background-color: #f9a825;
+  color: black;
+  margin-right: 5px;
+}
+
+button.delete {
+  background-color: #c62828;
+  color: white;
+}
+
+/* الجدول – بعرض الشاشة */
+table {
+  width: 100%;
+  margin-top: 20px;
+  border-collapse: collapse;
+}
+
+/* رؤوس */
+th {
+  background-color: #2e7d32;
+  color: white;
+  padding: 14px;
+  font-size: 15px;
+}
+
+/* خلايا */
+td {
+  padding: 12px;
+  text-align: center;
+  border-bottom: 1px solid #e0e0e0;
+}
+
+/* تمرير */
+tr:hover {
+  background-color: #f5f5f5;
+}
+
+/* لا يوجد بيانات */
+td[colspan="4"] {
+  padding: 20px;
+  color: #666;
 }

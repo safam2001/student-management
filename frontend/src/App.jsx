@@ -100,7 +100,7 @@ function App() {
         placeholder="Search by name or major..."
         value={search}
         onChange={(e) => setSearch(e.target.value)}
-        style={{ marginBottom: "15px", width: "60%" }}
+        style={{ marginBottom: "3px", width: "70%" }}
       />
 
       {/* الجدول */}
@@ -136,6 +136,16 @@ function App() {
                     Delete
                   </button>
                   <input type="text"  />
+
+                     <button className="edit" onClick={() => handleEdit(s)}>
+                    Edit
+                  </button>
+                   <button
+                    className="delete"
+                    onClick={() => handleDelete(s.id)}
+                  >
+                    Delete
+                  </button>
                 </td>
               </tr>
             ))

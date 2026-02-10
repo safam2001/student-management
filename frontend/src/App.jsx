@@ -135,6 +135,7 @@ function App() {
                   >
                     Delete
                   </button>
+                  <input type="text"  />
                 </td>
               </tr>
             ))
